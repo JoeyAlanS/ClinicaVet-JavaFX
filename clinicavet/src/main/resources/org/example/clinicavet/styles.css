@@ -1,0 +1,16 @@
+.root {
+    -fx-background-color: white;
+}
+
+.table-view {
+    -fx-border-color: #6d9b5f;
+}
+
+.button {
+    -fx-background-color: #6d9b5f;
+    -fx-text-fill: white;
+}
+
+.label {
+    -fx-text-fill: #6d9b5f;
+}

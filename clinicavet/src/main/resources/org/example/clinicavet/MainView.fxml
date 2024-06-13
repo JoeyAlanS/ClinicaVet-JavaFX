@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<TabPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="org.example.clinicavet.MainViewController">
+  <padding>
+    <Insets top="10" right="10" bottom="10" left="10"/>
+  </padding>
+  <tabs>
+    <Tab text="Animais">
+      <VBox spacing="10">
+        <TableView fx:id="animalTable">
+          <columns>
+            <TableColumn fx:id="nomeColumn" text="Nome"/>
+            <TableColumn fx:id="idadeColumn" text="Idade"/>
+            <TableColumn fx:id="especieColumn" text="Espécie"/>
+          </columns>
+        </TableView>
+        <HBox spacing="10">
+          <VBox>
+            <Label text="Nome"/>
+            <TextField fx:id="nomeAnimalField"/>
+          </VBox>
+          <VBox>
+            <Label text="Idade"/>
+            <TextField fx:id="idadeAnimalField"/>
+          </VBox>
+          <VBox>
+            <Label text="Espécie"/>
+            <TextField fx:id="especieAnimalField"/>
+          </VBox>
+          <Button text="Adicionar Animal" onAction="#handleAdicionarAnimal"/>
+        </HBox>
+      </VBox>
+    </Tab>
+    <Tab text="Funcionários">
+      <VBox spacing="10">
+        <TableView fx:id="funcionarioTable">
+          <columns>
+            <TableColumn fx:id="nomeFuncionarioColumn" text="Nome"/>
+            <TableColumn fx:id="cpfFuncionarioColumn" text="CPF"/>
+            <TableColumn fx:id="salarioFuncionarioColumn" text="Salário"/>
+          </columns>
+        </TableView>
+        <HBox spacing="10">
+          <VBox>
+            <Label text="Nome"/>
+            <TextField fx:id="nomeFuncionarioField"/>
+          </VBox>
+          <VBox>
+            <Label text="CPF"/>
+            <TextField fx:id="cpfFuncionarioField"/>
+          </VBox>
+          <VBox>
+            <Label text="Salário"/>
+            <TextField fx:id="salarioFuncionarioField"/>
+          </VBox>
+          <Button text="Adicionar Funcionário" onAction="#handleAdicionarFuncionario"/>
+        </HBox>
+      </VBox>
+    </Tab>
+    <Tab text="Veterinários">
+      <AnchorPane>
+        <VBox spacing="10" alignment="CENTER">
+          <Label text="Adicionar Veterinário"/>
+          <HBox spacing="10">
+            <Label text="Nome"/>
+            <TextField fx:id="nomeVeterinarioTextField"/>
+          </HBox>
+          <HBox spacing="10">
+            <Label text="CPF"/>
+            <TextField fx:id="cpfVeterinarioTextField"/>
+          </HBox>
+          <Button text="Adicionar Veterinário" onAction="#adicionarVeterinario"/>
+        </VBox>
+      </AnchorPane>
+    </Tab>
+    <Tab text="Serviços">
+      <VBox spacing="10">
+        <TableView fx:id="servicoTable">
+          <columns>
+            <TableColumn fx:id="descricaoServicoColumn" text="Descrição"/>
+            <TableColumn fx:id="precoServicoColumn" text="Preço"/>
+          </columns>
+        </TableView>
+        <HBox spacing="10">
+          <VBox>
+            <Label text="Descrição"/>
+            <TextField fx:id="descricaoServicoField"/>
+          </VBox>
+          <VBox>
+            <Label text="Preço"/>
+            <TextField fx:id="precoServicoField"/>
+          </VBox>
+          <Button text="Adicionar Serviço" onAction="#handleAdicionarServico"/>
+        </HBox>
+      </VBox>
+    </Tab>
+    <Tab text="Agendamentos">
+      <VBox spacing="10">
+        <HBox spacing="10">
+          <VBox>
+            <Label text="Serviço"/>
+            <ComboBox fx:id="servicoComboBox"/>
+          </VBox>
+          <VBox>
+            <Label text="Animal"/>
+            <TextField fx:id="animalTextField"/>
+          </VBox>
+          <VBox>
+            <Label text="Data"/>
+            <DatePicker fx:id="dataDatePicker"/>
+          </VBox>
+          <Button text="Adicionar Agendamento" onAction="#adicionarAgendamento"/>
+        </HBox>
+      </VBox>
+    </Tab>
+    <Tab text="Adoção">
+      <VBox spacing="10">
+        <TableView fx:id="adocaoTable">
+          <columns>
+            <TableColumn fx:id="especieAdocaoColumn" text="Espécie"/>
+          </columns>
+        </TableView>
+        <Button text="Adicionar Gato" onAction="#adicionarGato"/>
+        <Button text="Adicionar Rato" onAction="#adicionarRato"/>
+      </VBox>
+    </Tab>
+  </tabs>
+</TabPane>
